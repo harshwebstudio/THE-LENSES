@@ -1,1 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#171715">
+
+    <meta name="description"
+          content="Explore the curated eyewear collection at The Lenses. Discover premium frames, sunglasses and timeless optical styles.">
+
+    <meta name="keywords"
+          content="The Lenses, eyewear collection, optical frames, sunglasses, premium eyewear">
+
+    <title>Collection | The Lenses</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="collection.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="collection-header">
+
+    <div class="collection-nav">
+
+        <a href="index.html"
+           class="collection-logo">
+            THE <span>LENSES</span>
+        </a>
+
+        <nav class="collection-desktop-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="collection.html"
+               class="active">
+                Collection
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <a href="contact.html"
+           class="collection-nav-button">
+            Visit Us
+        </a>
+
+        <button class="collection-menu-button"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
+
+<div class="collection-mobile-menu">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="collection.html">
+        Collection
+    </a>
+
+    <a href="index.html#about">
+        About
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <a href="contact.html"
+       class="mobile-menu-cta">
+        Visit The Lenses
+    </a>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="collection-hero">
+
+    <div class="collection-hero-image">
+
+        <img src="images/collection-hero.jpg"
+             alt="Premium eyewear collection at The Lenses"
+             loading="eager">
+
+    </div>
+
+    <div class="collection-hero-overlay"></div>
+
+    <div class="collection-hero-content">
+
+        <span class="collection-eyebrow">
+            THE LENSES / COLLECTION
+        </span>
+
+        <h1>
+            Frames with
+            <em>character.</em>
+        </h1>
+
+        <p>
+            A carefully selected collection of optical frames
+            and sunglasses designed for modern everyday style.
+        </p>
+
+        <a href="#collection-grid"
+           class="collection-primary-button">
+            Explore Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="collection-intro">
+
+    <div class="collection-section-label">
+        <span>01</span>
+        CURATED SELECTION
+    </div>
+
+    <div class="collection-intro-grid">
+
+        <h2>
+            See the world
+            <em>differently.</em>
+        </h2>
+
+        <div>
+
+            <p>
+                From refined everyday frames to expressive
+                sunglasses, every piece at The Lenses is selected
+                with proportion, comfort and timeless design in mind.
+            </p>
+
+            <p>
+                Explore our collection and find a frame that feels
+                naturally yours.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY FILTER
+========================= -->
+
+<section class="collection-products"
+         id="collection-grid">
+
+    <div class="collection-section-heading">
+
+        <div>
+
+            <div class="collection-section-label">
+                <span>02</span>
+                THE COLLECTION
+            </div>
+
+            <h2>
+                Find your
+                <em>frame.</em>
+            </h2>
+
+        </div>
+
+        <p>
+            Browse our curated range by style.
+        </p>
+
+    </div>
+
+
+    <div class="collection-filter">
+
+        <button class="filter-button active"
+                data-filter="all">
+            All
+        </button>
+
+        <button class="filter-button"
+                data-filter="optical">
+            Optical
+        </button>
+
+        <button class="filter-button"
+                data-filter="sunglasses">
+            Sunglasses
+        </button>
+
+        <button class="filter-button"
+                data-filter="premium">
+            Premium
+        </button>
+
+    </div>
+
+
+    <div class="collection-product-grid">
+
+
+        <!-- PRODUCT 01 -->
+
+        <article class="collection-product"
+                 data-category="optical">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-01.jpg"
+                     alt="Classic optical frame"
+                     loading="lazy">
+
+                <span class="product-number">
+                    01
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Classic
+                    </h3>
+
+                    <p>
+                        Refined optical frame
+                    </p>
+
+                </div>
+
+                <span>
+                    Optical
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 02 -->
+
+        <article class="collection-product"
+                 data-category="sunglasses">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-02.jpg"
+                     alt="Premium sunglasses"
+                     loading="lazy">
+
+                <span class="product-number">
+                    02
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Riviera
+                    </h3>
+
+                    <p>
+                        Contemporary sunglasses
+                    </p>
+
+                </div>
+
+                <span>
+                    Sunglasses
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 03 -->
+
+        <article class="collection-product"
+                 data-category="premium">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-03.jpg"
+                     alt="Premium luxury eyewear"
+                     loading="lazy">
+
+                <span class="product-number">
+                    03
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Atelier
+                    </h3>
+
+                    <p>
+                        Statement premium frame
+                    </p>
+
+                </div>
+
+                <span>
+                    Premium
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 04 -->
+
+        <article class="collection-product"
+                 data-category="optical">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-04.jpg"
+                     alt="Modern optical glasses"
+                     loading="lazy">
+
+                <span class="product-number">
+                    04
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Modern
+                    </h3>
+
+                    <p>
+                        Clean everyday optical
+                    </p>
+
+                </div>
+
+                <span>
+                    Optical
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 05 -->
+
+        <article class="collection-product"
+                 data-category="sunglasses">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-05.jpg"
+                     alt="Contemporary sunglasses"
+                     loading="lazy">
+
+                <span class="product-number">
+                    05
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Milano
+                    </h3>
+
+                    <p>
+                        Elegant statement sunglasses
+                    </p>
+
+                </div>
+
+                <span>
+                    Sunglasses
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 06 -->
+
+        <article class="collection-product"
+                 data-category="premium">
+
+            <div class="collection-product-image">
+
+                <img src="images/frame-06.jpg"
+                     alt="Luxury premium eyewear"
+                     loading="lazy">
+
+                <span class="product-number">
+                    06
+                </span>
+
+            </div>
+
+            <div class="collection-product-info">
+
+                <div>
+
+                    <h3>
+                        The Signature
+                    </h3>
+
+                    <p>
+                        Distinctive premium frame
+                    </p>
+
+                </div>
+
+                <span>
+                    Premium
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COLLECTION CTA
+========================= -->
+
+<section class="collection-cta">
+
+    <div class="collection-cta-content">
+
+        <span class="collection-section-label light">
+            THE RIGHT FRAME
+        </span>
+
+        <h2>
+            Your next
+            <em>signature look.</em>
+        </h2>
+
+        <p>
+            Visit The Lenses and discover the frame
+            that feels made for you.
+        </p>
+
+        <a href="contact.html"
+           class="collection-light-button">
+            Visit The Store
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="collection-footer">
+
+    <div class="collection-footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html">
+                THE LENSES
+            </a>
+
+            <p>
+                Curated eyewear for people who
+                see style differently.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="collection.html">
+                Collection
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="https://instagram.com/"
+               target="_blank"
+               rel="noopener">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/91XXXXXXXXXX"
+               target="_blank"
+               rel="noopener">
+                WhatsApp
+            </a>
+
+            <a href="tel:+91XXXXXXXXXX">
+                Call Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="collection-footer-bottom">
+
+        <span>
+            © <span class="current-year"></span>
+            The Lenses
+        </span>
+
+        <span>
+            Crafted with precision.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="collection.js"></script>
+
+</body>
+  </html>
+<!-- =========================================================
+     COLLECTION PAGE — PART 2
+     No additional HTML required.
+     
+     PART 1 already contains:
+     - Header
+     - Mobile menu
+     - Hero
+     - Introduction
+     - Filters
+     - 6 collection products
+     - CTA
+     - Footer
+========================================================= -->
+
+<!--
+IMPORTANT IMAGE FILES:
+
+images/collection-hero.jpg
+images/frame-01.jpg
+images/frame-02.jpg
+images/frame-03.jpg
+images/frame-04.jpg
+images/frame-05.jpg
+images/frame-06.jpg
+
+Replace these image files with your actual eyewear photos.
+Keep the filenames exactly the same.
+-->
+
+<!--
+CONTACT DETAILS TO UPDATE:
+
+Instagram:
+https://instagram.com/YOUR_USERNAME
+
+WhatsApp:
+https://wa.me/91XXXXXXXXXX
+
+Phone:
+tel:+91XXXXXXXXXX
+-->
+
+<!-- =========================================================
+     END OF COLLECTION.HTML
+========================================================= -->
 
