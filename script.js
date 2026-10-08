@@ -1,532 +1,621 @@
-/* =========================================================
-   THE LENSES — PREMIUM WEBSITE
-   SCRIPT.JS — PART 1
-========================================================= */
+/* =====================================================
+   THE LENSES — HOMEPAGE JAVASCRIPT
+   PART 1 / 3
+===================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+"use strict";
 
-    /* =========================
-       ELEMENTS
-    ========================= */
 
-    const header = document.querySelector(".header");
-    const menuButton = document.querySelector(".menu-button");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    const mobileLinks = document.querySelectorAll(".mobile-menu a");
-    const navLinks = document.querySelectorAll(".desktop-nav a");
+/* =====================================================
+   DOM ELEMENTS
+====================================================== */
 
-    /* =========================
-       HEADER SCROLL EFFECT
-    ========================= */
+const header = document.getElementById("site-header");
 
-    function handleHeaderScroll() {
-        if (!header) return;
+const menuButton = document.querySelector(".menu-button");
 
-        if (window.scrollY > 60) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+const mobileMenu = document.getElementById("mobile-menu");
+
+const mobileLinks =
+    document.querySelectorAll(".mobile-menu a");
+
+const preloader =
+    document.querySelector(".preloader");
+
+
+/* =====================================================
+   HEADER SCROLL EFFECT
+====================================================== */
+
+function handleHeaderScroll() {
+
+    if (!header) return;
+
+    if (window.scrollY > 35) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
     }
 
-    handleHeaderScroll();
-
-    window.addEventListener("scroll", handleHeaderScroll, {
-        passive: true
-    });
+}
 
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+window.addEventListener(
+    "scroll",
+    handleHeaderScroll,
+    { passive: true }
+);
 
-    function openMenu() {
-        if (!mobileMenu) return;
 
-        mobileMenu.classList.add("active");
-        document.body.classList.add("menu-open");
+handleHeaderScroll();
 
-        if (menuButton) {
-            menuButton.classList.add("active");
-            menuButton.setAttribute("aria-expanded", "true");
-        }
+
+/* =====================================================
+   MOBILE MENU
+====================================================== */
+
+function openMenu() {
+
+    if (!menuButton || !mobileMenu) return;
+
+    menuButton.classList.add("active");
+
+    mobileMenu.classList.add("open");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add("menu-open");
+
+}
+
+
+function closeMenu() {
+
+    if (!menuButton || !mobileMenu) return;
+
+    menuButton.classList.remove("active");
+
+    mobileMenu.classList.remove("open");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    mobileMenu.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove("menu-open");
+
+}
+
+
+function toggleMenu() {
+
+    if (!mobileMenu) return;
+
+    if (mobileMenu.classList.contains("open")) {
+
+        closeMenu();
+
+    } else {
+
+        openMenu();
+
     }
 
-    function closeMenu() {
-        if (!mobileMenu) return;
+}
 
-        mobileMenu.classList.remove("active");
-        document.body.classList.remove("menu-open");
 
-        if (menuButton) {
-            menuButton.classList.remove("active");
-            menuButton.setAttribute("aria-expanded", "false");
-        }
-    }
+if (menuButton) {
 
-    function toggleMenu() {
-        if (!mobileMenu) return;
+    menuButton.addEventListener(
+        "click",
+        toggleMenu
+    );
 
-        if (mobileMenu.classList.contains("active")) {
+}
+
+
+/* =====================================================
+   CLOSE MOBILE MENU ON LINK CLICK
+====================================================== */
+
+mobileLinks.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
             closeMenu();
-        } else {
-            openMenu();
+
         }
-    }
+    );
 
-    if (menuButton) {
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open navigation menu");
-
-        menuButton.addEventListener("click", toggleMenu);
-    }
-
-    mobileLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            closeMenu();
-        });
-    });
+});
 
 
-    /* =========================
-       ESCAPE KEY
-    ========================= */
+/* =====================================================
+   ESCAPE KEY
+====================================================== */
 
-    document.addEventListener("keydown", event => {
+document.addEventListener(
+    "keydown",
+    function(event) {
 
         if (event.key === "Escape") {
+
             closeMenu();
+
         }
 
-    });
+    }
+);
 
 
-    /* =========================
-       SMOOTH SCROLL
-    ========================= */
+/* =====================================================
+   PREVENT MENU FROM STAYING OPEN ON DESKTOP
+====================================================== */
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+window.addEventListener(
+    "resize",
+    function() {
 
-        link.addEventListener("click", function (event) {
+        if (window.innerWidth >= 1000) {
 
-            const targetId = this.getAttribute("href");
+            closeMenu();
 
-            if (!targetId || targetId === "#") return;
+        }
 
-            const target = document.querySelector(targetId);
+    },
+    { passive: true }
+);
+/* =====================================================
+   THE LENSES — HOMEPAGE JAVASCRIPT
+   PART 2 / 3
+===================================================== */
 
-            if (!target) return;
+
+/* =====================================================
+   SMOOTH INTERNAL LINKS
+====================================================== */
+
+const internalLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+
+internalLinks.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function(event) {
+
+            const targetId =
+                link.getAttribute("href");
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+
+                return;
+
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+
+                return;
+
+            }
+
 
             event.preventDefault();
 
-            const headerHeight = header
-                ? header.offsetHeight
-                : 0;
+
+            closeMenu();
+
+
+            const headerHeight =
+                header
+                    ? header.offsetHeight
+                    : 0;
+
 
             const targetPosition =
                 target.getBoundingClientRect().top +
                 window.scrollY -
                 headerHeight;
 
+
             window.scrollTo({
+
                 top: targetPosition,
-                behavior: "smooth"
+
+                behavior:
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                        ? "auto"
+                        : "smooth"
+
             });
 
-        });
-
-    });
-
-
-    /* =========================
-       ACTIVE NAVIGATION
-    ========================= */
-
-    const sections = document.querySelectorAll("section[id]");
-
-    function updateActiveNav() {
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop -
-                (header ? header.offsetHeight : 0) -
-                120;
-
-            const sectionHeight = section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY < sectionTop + sectionHeight
-            ) {
-                currentSection = section.getAttribute("id");
-            }
-
-        });
-
-        navLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            const href = link.getAttribute("href");
-
-            if (href === `#${currentSection}`) {
-                link.classList.add("active");
-            }
-
-        });
-    }
-
-    updateActiveNav();
-
-    window.addEventListener("scroll", updateActiveNav, {
-        passive: true
-    });
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const revealElements = document.querySelectorAll(
-        ".section-heading, .intro-text, .category-card, .product-card, .about-image, .about-content, .service-item, .gallery-item, .testimonial-main, .location-content, .map-placeholder"
+        }
     );
 
-    revealElements.forEach(element => {
-        element.style.opacity = "0";
-        element.style.transform = "translateY(35px)";
-        element.style.transition =
-            "opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1)";
-    });
+});
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
 
-            entries.forEach(entry => {
+/* =====================================================
+   BACK TO TOP
+====================================================== */
 
-                if (!entry.isIntersecting) return;
+const backTop =
+    document.querySelector(".back-top");
 
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
 
-                observer.unobserve(entry.target);
+if (backTop) {
+
+    backTop.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior:
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                        ? "auto"
+                        : "smooth"
 
             });
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CURRENT YEAR
+====================================================== */
+
+const yearElement =
+    document.getElementById(
+        "current-year"
+    );
+
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   PRELOADER
+====================================================== */
+
+function removePreloader() {
+
+    if (!preloader) return;
+
+    preloader.classList.add(
+        "preloader-finished"
+    );
+
+
+    window.setTimeout(
+        function() {
+
+            if (preloader) {
+
+                preloader.remove();
+
+            }
 
         },
-        {
-            threshold: 0.12,
-            rootMargin: "0px 0px -50px 0px"
-        }
+        900
     );
 
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
-
-
-    /* =========================
-       STAGGERED CARD ANIMATION
-    ========================= */
-
-    const animatedGroups = [
-        ".category-grid",
-        ".product-grid",
-        ".gallery-grid",
-        ".service-list"
-    ];
-
-    animatedGroups.forEach(selector => {
-
-        const parent = document.querySelector(selector);
-
-        if (!parent) return;
-
-        const children = parent.children;
-
-        Array.from(children).forEach((child, index) => {
-
-            child.style.transitionDelay =
-                `${Math.min(index * 0.08, 0.4)}s`;
-
-        });
-
-    });
-
-
-    /* =========================
-       IMAGE LOADING
-    ========================= */
-
-    const images = document.querySelectorAll("img");
-
-    images.forEach(image => {
-
-        image.addEventListener("load", () => {
-            image.classList.add("loaded");
-        });
-
-        if (image.complete) {
-            image.classList.add("loaded");
-        }
-
-    });
-
-
-    /* =========================================================
-       END OF PART 1
-    ========================================================= */
-});
-
-
-/* =========================================================
-   THE LENSES — PREMIUM WEBSITE
-   SCRIPT.JS — PART 2
-========================================================= */
-
-
-/* =========================
-   PRELOADER
-========================= */
-
-const preloader = document.querySelector(".preloader");
-
-if (preloader) {
-
-    window.addEventListener("load", () => {
-
-        setTimeout(() => {
-            preloader.classList.add("loaded");
-        }, 900);
-
-    });
-
 }
 
 
-/* =========================
-   CURRENT YEAR
-========================= */
+if (document.readyState === "complete") {
 
-const yearElements = document.querySelectorAll(".current-year");
+    window.setTimeout(
+        removePreloader,
+        700
+    );
 
-yearElements.forEach(element => {
-    element.textContent = new Date().getFullYear();
-});
+} else {
 
+    window.addEventListener(
+        "load",
+        function() {
 
-/* =========================
-   BACK TO TOP
-========================= */
-
-const backToTop = document.querySelector(".back-to-top");
-
-if (backToTop) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 600) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
-
-    }, {
-        passive: true
-    });
-
-    backToTop.addEventListener("click", event => {
-
-        event.preventDefault();
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
-
-
-/* =========================
-   IMAGE ERROR HANDLING
-========================= */
-
-document.querySelectorAll("img").forEach(image => {
-
-    image.addEventListener("error", () => {
-
-        image.classList.add("image-error");
-
-        console.warn(
-            "The Lenses: Image could not be loaded:",
-            image.src
-        );
-
-    });
-
-});
-
-
-/* =========================
-   EXTERNAL LINKS
-========================= */
-
-document.querySelectorAll(
-    'a[href^="http://"], a[href^="https://"]'
-).forEach(link => {
-
-    const currentHost = window.location.hostname;
-
-    try {
-
-        const linkHost =
-            new URL(link.href).hostname;
-
-        if (
-            linkHost &&
-            linkHost !== currentHost
-        ) {
-            link.setAttribute(
-                "target",
-                "_blank"
+            window.setTimeout(
+                removePreloader,
+                350
             );
+
+        },
+        { once: true }
+    );
+
+}
+
+
+/* =====================================================
+   EXTERNAL LINKS
+====================================================== */
+
+const externalLinks =
+    document.querySelectorAll(
+        'a[target="_blank"]'
+    );
+
+
+externalLinks.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
 
             link.setAttribute(
                 "rel",
                 "noopener noreferrer"
             );
-        }
 
-    } catch (error) {
-        console.warn(
-            "Invalid external link:",
-            link.href
-        );
-    }
+        }
+    );
 
 });
 
 
-/* =========================
-   PHONE / WHATSAPP TRACKING
-========================= */
+/* =====================================================
+   IMAGE LOADING CHECK
+====================================================== */
 
-document.querySelectorAll(
-    'a[href^="tel:"], a[href*="wa.me"], a[href*="whatsapp"]'
-).forEach(link => {
+const images =
+    document.querySelectorAll("img");
 
-    link.addEventListener("click", () => {
 
-        console.log(
-            "The Lenses contact action:",
-            link.href
-        );
+images.forEach(function(image) {
 
-    });
+    image.addEventListener(
+        "error",
+        function() {
+
+            image.classList.add(
+                "image-error"
+            );
+
+            console.warn(
+                "The Lenses: Image could not be loaded:",
+                image.src
+            );
+
+        }
+    );
+
+});
+/* =====================================================
+   THE LENSES — HOMEPAGE JAVASCRIPT
+   PART 3 / 3
+===================================================== */
+
+
+/* =====================================================
+   CONTACT / CTA TRACKING
+====================================================== */
+
+const actionLinks =
+    document.querySelectorAll(
+        'a[href^="tel:"], ' +
+        'a[href^="mailto:"], ' +
+        'a[href*="wa.me"], ' +
+        'a[href*="instagram.com"], ' +
+        'a[href*="maps.google.com"]'
+    );
+
+
+actionLinks.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
+            const destination =
+                link.getAttribute("href");
+
+            console.info(
+                "The Lenses action:",
+                destination
+            );
+
+        }
+    );
 
 });
 
 
-/* =========================
-   SIMPLE PARALLAX
-========================= */
+/* =====================================================
+   MOBILE MENU — FOCUS SAFETY
+====================================================== */
 
-const heroImage = document.querySelector(".hero-image img");
+if (menuButton && mobileMenu) {
 
-if (heroImage && window.innerWidth > 700) {
+    mobileMenu.addEventListener(
+        "click",
+        function(event) {
 
-    window.addEventListener("scroll", () => {
+            if (
+                event.target === mobileMenu
+            ) {
 
-        const scrollPosition = window.scrollY;
+                closeMenu();
 
-        if (scrollPosition < window.innerHeight) {
-
-            heroImage.style.transform =
-                `scale(1.02) translateY(${scrollPosition * 0.08}px)`;
+            }
 
         }
-
-    }, {
-        passive: true
-    });
+    );
 
 }
 
 
-/* =========================
-   MOBILE MENU RESIZE FIX
-========================= */
+/* =====================================================
+   ORIENTATION / RESIZE SAFETY
+====================================================== */
 
-window.addEventListener("resize", () => {
+let resizeTimer;
 
-    if (
-        window.innerWidth > 1000 &&
-        mobileMenu &&
-        mobileMenu.classList.contains("active")
-    ) {
 
-        mobileMenu.classList.remove("active");
-        document.body.classList.remove("menu-open");
+window.addEventListener(
+    "resize",
+    function() {
 
-        if (menuButton) {
-            menuButton.classList.remove("active");
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
+        window.clearTimeout(
+            resizeTimer
+        );
+
+
+        resizeTimer =
+            window.setTimeout(
+                function() {
+
+                    if (
+                        window.innerWidth >= 1000
+                    ) {
+
+                        closeMenu();
+
+                    }
+
+                },
+                120
             );
+
+    },
+    { passive: true }
+);
+
+
+/* =====================================================
+   VISIBILITY CHANGE
+====================================================== */
+
+document.addEventListener(
+    "visibilitychange",
+    function() {
+
+        if (
+            document.visibilityState ===
+            "visible"
+        ) {
+
+            handleHeaderScroll();
+
         }
 
     }
+);
 
-});
 
+/* =====================================================
+   REDUCED MOTION DETECTION
+====================================================== */
 
-/* =========================
-   REDUCED MOTION SUPPORT
-========================= */
-
-const prefersReducedMotion =
+const reducedMotion =
     window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     );
 
-if (prefersReducedMotion.matches) {
 
-    document.documentElement.style.scrollBehavior =
-        "auto";
+function handleMotionPreference() {
 
-    document.querySelectorAll("*").forEach(element => {
+    if (reducedMotion.matches) {
 
-        element.style.animationDuration = "0s";
-        element.style.transitionDuration = "0s";
+        document.documentElement
+            .classList.add(
+                "reduced-motion"
+            );
 
-    });
+    } else {
+
+        document.documentElement
+            .classList.remove(
+                "reduced-motion"
+            );
+
+    }
 
 }
 
 
-/* =========================
-   CONSOLE BRANDING
-========================= */
+handleMotionPreference();
 
-console.log(
-    "%c THE LENSES ",
-    "font-size:20px;font-weight:bold;"
+
+if (
+    typeof reducedMotion.addEventListener ===
+    "function"
+) {
+
+    reducedMotion.addEventListener(
+        "change",
+        handleMotionPreference
+    );
+
+}
+
+
+/* =====================================================
+   FINAL INITIALIZATION
+====================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        handleHeaderScroll();
+
+        console.info(
+            "The Lenses — Premium Eyewear Website"
+        );
+
+    }
 );
 
-console.log(
-    "Premium Optical & Eyewear Experience"
-);
 
-console.log(
-    "Website powered by Haven Websites."
-);
-
-
-/* =========================================================
-   END OF SCRIPT.JS
-========================================================= */
+/* =====================================================
+   END — THE LENSES
+====================================================== */
