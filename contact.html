@@ -1,634 +1,960 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
+    <!-- =====================================================
+         BASIC SEO
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="theme-color" content="#171715">
+    <meta
+        name="description"
+        content="Contact The Lenses for premium eyewear, optical frames, sunglasses, appointments and personalised eyewear assistance."
+    >
 
-    <meta name="description"
-          content="Contact The Lenses for premium eyewear, optical frames, sunglasses and an in-store eyewear experience.">
+    <meta
+        name="keywords"
+        content="The Lenses, eyewear, optical store, sunglasses, premium glasses, contact lenses, eyewear appointment"
+    >
 
-    <meta name="keywords"
-          content="The Lenses contact, optical store, eyewear shop, sunglasses, spectacles">
+    <meta
+        name="author"
+        content="The Lenses"
+    >
 
-    <title>Contact | The Lenses</title>
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link
+        rel="canonical"
+        href="https://example.com/contact.html"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
-          rel="stylesheet">
 
-    <link rel="stylesheet"
-          href="contact.css">
+    <!-- =====================================================
+         SOCIAL SEO
+    ====================================================== -->
+
+    <meta
+        property="og:title"
+        content="Contact The Lenses — Premium Eyewear"
+    >
+
+    <meta
+        property="og:description"
+        content="Get in touch with The Lenses for premium eyewear and personalised assistance."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="images/contact-hero.jpg"
+    >
+
+
+    <!-- =====================================================
+         TITLE
+    ====================================================== -->
+
+    <title>
+        Contact The Lenses — Premium Eyewear
+    </title>
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo.png"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CONTACT CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="contact.css"
+    >
 
 </head>
+
 
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<header class="contact-header">
+    <header
+        class="header"
+        id="site-header"
+    >
 
-    <div class="contact-nav">
+        <div class="header-inner">
 
-        <a href="index.html"
-           class="contact-logo">
-            THE <span>LENSES</span>
-        </a>
 
-        <nav class="contact-desktop-nav">
+            <!-- LOGO -->
 
-            <a href="index.html">
-                Home
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="The Lenses Home"
+            >
+
+                <img
+                    src="images/logo.png"
+                    alt="The Lenses logo"
+                >
+
+                <span>
+                    THE LENSES
+                </span>
+
             </a>
 
-            <a href="collection.html">
-                Collection
-            </a>
 
-            <a href="index.html#about">
-                About
-            </a>
+            <!-- DESKTOP NAV -->
 
-            <a href="contact.html"
-               class="active">
-                Contact
-            </a>
+            <nav
+                class="desktop-nav"
+                aria-label="Main navigation"
+            >
 
-        </nav>
+                <a href="index.html">
+                    Home
+                </a>
 
-        <a href="#contact-options"
-           class="contact-nav-button">
-            Get In Touch
-        </a>
+                <a href="collection.html">
+                    Collection
+                </a>
 
-        <button class="contact-menu-button"
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#services">
+                    Services
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="active"
+                >
+                    Contact
+                </a>
+
+                <a
+                    href="#visit"
+                    class="nav-visit"
+                >
+                    Visit Us
+                </a>
+
+            </nav>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="menu-button"
                 type="button"
                 aria-label="Open menu"
-                aria-expanded="false">
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
 
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
 
-        </button>
+            </button>
 
-    </div>
-
-</header>
-
-
-<!-- =========================
-     MOBILE MENU
-========================= -->
-
-<div class="contact-mobile-menu">
-
-    <a href="index.html">
-        Home
-    </a>
-
-    <a href="collection.html">
-        Collection
-    </a>
-
-    <a href="index.html#about">
-        About
-    </a>
-
-    <a href="contact.html">
-        Contact
-    </a>
-
-    <a href="#contact-options"
-       class="contact-mobile-cta">
-        Get In Touch
-    </a>
-
-</div>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<main>
-
-<section class="contact-hero">
-
-    <div class="contact-hero-image">
-
-        <img src="images/contact-hero.jpg"
-             alt="The Lenses premium eyewear store"
-             loading="eager">
-
-    </div>
-
-    <div class="contact-hero-overlay"></div>
-
-    <div class="contact-hero-content">
-
-        <span>
-            THE LENSES / CONTACT
-        </span>
-
-        <h1>
-            Let's find your
-            <em>perfect frame.</em>
-        </h1>
-
-        <p>
-            Have a question, want to explore our collection,
-            or planning a visit? We are just a message away.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT INTRO
-========================= -->
-
-<section class="contact-intro">
-
-    <div class="contact-section-label">
-        <span>01</span>
-        CONNECT WITH US
-    </div>
-
-    <div class="contact-intro-grid">
-
-        <h2>
-            We're here to
-            <em>help.</em>
-        </h2>
-
-        <p>
-            Choose the way that works best for you.
-            Message us, call the store, follow our latest
-            styles on Instagram or send us an email.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT OPTIONS
-========================= -->
-
-<section class="contact-options"
-         id="contact-options">
-
-    <div class="contact-section-heading">
-
-        <div class="contact-section-label">
-            <span>02</span>
-            GET IN TOUCH
         </div>
 
-        <h2>
-            One store.
-            <em>Four ways.</em>
-        </h2>
 
-    </div>
+        <!-- =================================================
+             MOBILE MENU
+        ================================================== -->
+
+        <div
+            class="mobile-menu"
+            id="mobile-menu"
+            aria-hidden="true"
+        >
+
+            <div class="mobile-menu-inner">
+
+                <div class="mobile-menu-label">
+                    THE LENSES
+                </div>
 
 
-    <div class="contact-action-grid">
+                <nav
+                    class="mobile-nav"
+                    aria-label="Mobile navigation"
+                >
+
+                    <a href="index.html">
+                        <span>01</span>
+                        Home
+                    </a>
+
+                    <a href="collection.html">
+                        <span>02</span>
+                        Collection
+                    </a>
+
+                    <a href="index.html#about">
+                        <span>03</span>
+                        About
+                    </a>
+
+                    <a href="index.html#services">
+                        <span>04</span>
+                        Services
+                    </a>
+
+                    <a href="contact.html">
+                        <span>05</span>
+                        Contact
+                    </a>
+
+                    <a href="#visit">
+                        <span>06</span>
+                        Visit The Lenses
+                    </a>
+
+                </nav>
 
 
-        <!-- WHATSAPP -->
+                <div class="mobile-menu-footer">
+                    Premium Eyewear Experience
+                </div>
 
-        <a href="https://wa.me/91XXXXXXXXXX"
-           class="contact-action whatsapp"
-           target="_blank"
-           rel="noopener">
-
-            <div class="action-icon">
-                WA
             </div>
 
-            <div class="action-content">
+        </div>
 
-                <span>
-                    MESSAGE
-                </span>
+    </header>
 
-                <h3>
-                    WhatsApp
-                </h3>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-image">
+
+                <img
+                    src="images/contact-hero.jpg"
+                    alt="Premium eyewear at The Lenses"
+                    fetchpriority="high"
+                >
+
+            </div>
+
+
+            <div class="contact-hero-overlay"></div>
+
+
+            <div class="contact-hero-content">
+
+                <div class="hero-label">
+                    <span>01</span>
+                    GET IN TOUCH
+                </div>
+
+                <h1>
+                    Let's start a
+                    <em>conversation.</em>
+                </h1>
 
                 <p>
-                    Chat with us directly
-                    for enquiries and appointments.
+                    Visit The Lenses, speak with our team,
+                    or connect with us directly for your
+                    next eyewear experience.
                 </p>
 
             </div>
 
-            <strong>
-                →
-            </strong>
 
-        </a>
-
-
-        <!-- CALL -->
-
-        <a href="tel:+91XXXXXXXXXX"
-           class="contact-action">
-
-            <div class="action-icon">
-                ☎
+            <div class="hero-scroll">
+                SCROLL TO EXPLORE
+                <span>↓</span>
             </div>
 
-            <div class="action-content">
+        </section>
 
-                <span>
-                    SPEAK WITH US
-                </span>
 
-                <h3>
-                    Call Us
-                </h3>
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="contact-intro">
+
+            <div class="contact-intro-inner">
+
+                <div class="section-label">
+                    <span>02</span>
+                    CONNECT
+                </div>
+
+                <div class="intro-grid">
+
+                    <h2>
+                        Your next pair
+                        starts with a
+                        <em>conversation.</em>
+                    </h2>
+
+                    <div class="intro-copy">
+
+                        <p>
+                            Whether you already know what
+                            you're looking for or need help
+                            finding the right frame, our team
+                            is here to make the experience
+                            simple and personal.
+                        </p>
+
+                        <p>
+                            Choose your preferred way to
+                            connect with The Lenses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+             <!-- =================================================
+             PREMIUM ACTION BOXES
+        ================================================== -->
+
+        <section class="contact-actions">
+
+            <div class="contact-actions-inner">
+
+                <div class="action-heading">
+
+                    <div class="section-label">
+                        <span>03</span>
+                        CHOOSE YOUR CONNECTION
+                    </div>
+
+                    <h2>
+                        Connect with
+                        <em>The Lenses.</em>
+                    </h2>
+
+                </div>
+
+
+                <div class="action-grid">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <article class="action-card">
+
+                        <div class="action-top">
+
+                            <span class="action-number">
+                                01
+                            </span>
+
+                            <span class="action-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Instagram
+                            </h3>
+
+                            <p>
+                                Explore our latest eyewear
+                                styles, frames and updates.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://instagram.com/YOUR_USERNAME"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="click-now"
+                        >
+
+                            <span>
+                                CLICK NOW
+                            </span>
+
+                            <strong>
+                                ↗
+                            </strong>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- WHATSAPP -->
+
+                    <article class="action-card">
+
+                        <div class="action-top">
+
+                            <span class="action-number">
+                                02
+                            </span>
+
+                            <span class="action-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                WhatsApp
+                            </h3>
+
+                            <p>
+                                Chat with our team for quick
+                                enquiries and assistance.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://wa.me/919999999999"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="click-now"
+                        >
+
+                            <span>
+                                CLICK NOW
+                            </span>
+
+                            <strong>
+                                ↗
+                            </strong>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- CALL -->
+
+                    <article class="action-card">
+
+                        <div class="action-top">
+
+                            <span class="action-number">
+                                03
+                            </span>
+
+                            <span class="action-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Call Us
+                            </h3>
+
+                            <p>
+                                Speak directly with our
+                                eyewear specialists.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="tel:+919999999999"
+                            class="click-now"
+                        >
+
+                            <span>
+                                CLICK NOW
+                            </span>
+
+                            <strong>
+                                ↗
+                            </strong>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- EMAIL -->
+
+                    <article class="action-card">
+
+                        <div class="action-top">
+
+                            <span class="action-number">
+                                04
+                            </span>
+
+                            <span class="action-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Email
+                            </h3>
+
+                            <p>
+                                Send us your enquiry and
+                                we'll get back to you.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="mailto:hello@thelenses.com"
+                            class="click-now"
+                        >
+
+                            <span>
+                                CLICK NOW
+                            </span>
+
+                            <strong>
+                                ↗
+                            </strong>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- DIRECTIONS -->
+
+                    <article class="action-card action-card-wide">
+
+                        <div class="action-top">
+
+                            <span class="action-number">
+                                05
+                            </span>
+
+                            <span class="action-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                        <div class="action-content">
+
+                            <h3>
+                                Get Directions
+                            </h3>
+
+                            <p>
+                                Find The Lenses and plan
+                                your visit to our store.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="https://maps.google.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="click-now"
+                        >
+
+                            <span>
+                                CLICK NOW
+                            </span>
+
+                            <strong>
+                                ↗
+                            </strong>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STORE INFORMATION
+        ================================================== -->
+
+        <section
+            class="store-section"
+            id="visit"
+        >
+
+            <div class="store-inner">
+
+                <div class="store-image">
+
+                    <img
+                        src="images/store.jpg"
+                        alt="The Lenses store"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="store-content">
+
+                    <div class="section-label">
+                        <span>04</span>
+                        VISIT THE LENSES
+                    </div>
+
+                    <h2>
+                        See it.
+                        <em>Try it.</em>
+                        Love it.
+                    </h2>
+
+                    <p class="store-description">
+                        Step into The Lenses for a curated
+                        eyewear experience designed around
+                        your style, comfort and vision.
+                    </p>
+
+
+                    <div class="store-details">
+
+                        <div class="detail-item">
+
+                            <span>
+                                ADDRESS
+                            </span>
+
+                            <p>
+                                Your Store Address<br>
+                                Your City, Maharashtra
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                HOURS
+                            </span>
+
+                            <p>
+                                Monday — Sunday<br>
+                                10:00 AM — 9:00 PM
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span>
+                                CONTACT
+                            </span>
+
+                            <p>
+                                +91 99999 99999<br>
+                                hello@thelenses.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="store-buttons">
+
+                        <a
+                            href="https://maps.google.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="primary-button"
+                        >
+                            Get Directions
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="https://wa.me/919999999999"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="secondary-button"
+                        >
+                            Book Appointment
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="contact-final">
+
+            <div class="contact-final-inner">
+
+                <div class="section-label">
+                    <span>05</span>
+                    YOUR NEXT FRAME
+                </div>
+
+                <h2>
+                    Ready to find your
+                    <em>signature look?</em>
+                </h2>
 
                 <p>
-                    Talk directly with our
-                    eyewear team.
+                    Start with a conversation.
+                    We'll take it from there.
+                </p>
+
+                <a
+                    href="https://wa.me/919999999999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="final-button"
+                >
+                    WhatsApp The Lenses
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="images/logo.png"
+                        alt="The Lenses"
+                    >
+
+                    <span>
+                        THE LENSES
+                    </span>
+
+                </a>
+
+                <p>
+                    Premium eyewear,
+                    thoughtfully curated.
                 </p>
 
             </div>
 
-            <strong>
-                →
-            </strong>
 
-        </a>
+            <div class="footer-column">
 
-
-        <!-- INSTAGRAM -->
-
-        <a href="https://instagram.com/YOUR_USERNAME"
-           class="contact-action"
-           target="_blank"
-           rel="noopener">
-
-            <div class="action-icon">
-                IG
-            </div>
-
-            <div class="action-content">
-
-                <span>
-                    FOLLOW
+                <span class="footer-heading">
+                    EXPLORE
                 </span>
 
-                <h3>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="collection.html">
+                    Collection
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#services">
+                    Services
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span class="footer-heading">
+                    CONNECT
+                </span>
+
+                <a
+                    href="https://instagram.com/YOUR_USERNAME"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Instagram
-                </h3>
+                </a>
 
-                <p>
-                    Discover our latest frames,
-                    styles and updates.
-                </p>
+                <a
+                    href="https://wa.me/919999999999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
 
-            </div>
+                <a href="tel:+919999999999">
+                    Call Us
+                </a>
 
-            <strong>
-                →
-            </strong>
-
-        </a>
-
-
-        <!-- EMAIL -->
-
-        <a href="mailto:hello@thelenses.com"
-           class="contact-action">
-
-            <div class="action-icon">
-                @
-            </div>
-
-            <div class="action-content">
-
-                <span>
-                    WRITE TO US
-                </span>
-
-                <h3>
+                <a href="mailto:hello@thelenses.com">
                     Email
-                </h3>
-
-                <p>
-                    Send us your enquiry
-                    or requirements.
-                </p>
+                </a>
 
             </div>
 
-            <strong>
-                →
-            </strong>
 
-        </a>
+            <div class="footer-column">
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-     STORE INFORMATION
-========================= -->
-
-<section class="store-information">
-
-    <div class="store-info-content">
-
-        <div class="contact-section-label">
-            <span>03</span>
-            VISIT THE LENSES
-        </div>
-
-        <h2>
-            Come see us
-            <em>in person.</em>
-        </h2>
-
-        <p>
-            Nothing replaces trying on the right frame.
-            Visit our store, explore the collection and
-            let our team help you find your fit.
-        </p>
-
-
-        <div class="store-details">
-
-            <div>
-
-                <span>
-                    ADDRESS
+                <span class="footer-heading">
+                    VISIT
                 </span>
 
-                <strong>
+                <p>
                     Your Store Address<br>
                     Your City, Maharashtra
-                </strong>
+                </p>
 
-            </div>
-
-
-            <div>
-
-                <span>
-                    OPENING HOURS
-                </span>
-
-                <strong>
-                    Monday – Saturday<br>
-                    10:00 AM – 8:00 PM
-                </strong>
+                <a
+                    href="https://maps.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Get Directions ↗
+                </a>
 
             </div>
 
         </div>
 
 
-        <a href="https://maps.google.com/"
-           target="_blank"
-           rel="noopener"
-           class="dark-contact-button">
-
-            Get Directions
-
-        </a>
-
-    </div>
-
-
-    <div class="contact-map">
-
-        <div class="map-circle">
+        <div class="footer-bottom">
 
             <span>
-                THE LENSES
+                © <span id="current-year"></span>
+                The Lenses. All rights reserved.
             </span>
 
-            <strong>
-                FIND US
-            </strong>
-
-            <a href="https://maps.google.com/"
-               target="_blank"
-               rel="noopener">
-
-                OPEN MAP
-
-            </a>
+            <span>
+                Premium Eyewear Experience
+            </span>
 
         </div>
 
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- =========================
-     FINAL CTA
-========================= -->
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
 
-<section class="contact-final">
-
-    <div>
-
-        <span>
-            HAVE A QUESTION?
-        </span>
-
-        <h2>
-            Your next pair
-            <em>starts here.</em>
-        </h2>
-
-        <a href="https://wa.me/91XXXXXXXXXX"
-           target="_blank"
-           rel="noopener"
-           class="light-contact-button">
-
-            Chat on WhatsApp
-
-        </a>
-
-    </div>
-
-</section>
-
-</main>
+    <button
+        class="back-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-<footer class="contact-footer">
-
-    <div class="contact-footer-grid">
-
-        <div class="contact-footer-brand">
-
-            <a href="index.html">
-                THE LENSES
-            </a>
-
-            <p>
-                Curated eyewear for people who
-                see style differently.
-            </p>
-
-        </div>
-
-
-        <div class="contact-footer-column">
-
-            <h4>
-                Explore
-            </h4>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="collection.html">
-                Collection
-            </a>
-
-            <a href="index.html#about">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="contact-footer-column">
-
-            <h4>
-                Connect
-            </h4>
-
-            <a href="https://instagram.com/YOUR_USERNAME"
-               target="_blank"
-               rel="noopener">
-                Instagram
-            </a>
-
-            <a href="https://wa.me/91XXXXXXXXXX"
-               target="_blank"
-               rel="noopener">
-                WhatsApp
-            </a>
-
-            <a href="tel:+91XXXXXXXXXX">
-                Call Us
-            </a>
-
-            <a href="mailto:hello@thelenses.com">
-                Email
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="contact-footer-bottom">
-
-        <span>
-            © <span class="current-year"></span>
-            The Lenses
-        </span>
-
-        <span>
-            Crafted with precision.
-        </span>
-
-    </div>
-
-</footer>
-
-
-<script src="contact.js"></script>
+    <script src="contact.js"></script>
 
 </body>
-  </html>
 
-  <!-- =========================================================
-     CONTACT PAGE — PART 2
-========================================================= -->
-
-<!--
-IMPORTANT:
-
-Update these placeholders with the REAL business details:
-
-1. WhatsApp
-   https://wa.me/91XXXXXXXXXX
-
-2. Phone
-   tel:+91XXXXXXXXXX
-
-3. Instagram
-   https://instagram.com/YOUR_USERNAME
-
-4. Email
-   mailto:hello@thelenses.com
-
-5. Google Maps
-   https://maps.google.com/
-
-6. Address
-   Replace:
-   Your Store Address
-   Your City, Maharashtra
-
-7. Opening Hours
-   Replace with the actual store timing.
-
-IMAGE:
-
-images/contact-hero.jpg
--->
-
-<!--
-The four contact buttons are intentionally separate:
-
-WhatsApp
-Call Us
-Instagram
-Email
-
-This makes the page much cleaner on mobile
-and each action is immediately understandable.
--->
-
-<!-- =========================================================
-     END OF CONTACT.HTML
-========================================================= -->
+                    </html>
