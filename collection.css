@@ -2328,3 +2328,210 @@ button {
     }
 
 }
+/* =========================================================
+   PREMIUM QUICK CONTACT
+========================================================= */
+
+.quick-contact {
+    background: var(--bg);
+    padding: 90px 0;
+}
+
+.quick-contact-inner {
+    width: min(
+        calc(100% - 32px),
+        var(--container)
+    );
+
+    margin-inline: auto;
+}
+
+.quick-contact h2 {
+    max-width: 700px;
+
+    margin: 0 0 42px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(
+        42px,
+        10vw,
+        76px
+    );
+
+    font-weight: 500;
+
+    line-height: .96;
+
+    letter-spacing: -2px;
+}
+
+.quick-contact h2 em {
+    color: var(--accent);
+
+    font-style: italic;
+}
+
+.contact-action-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+}
+
+.contact-action-card {
+    position: relative;
+
+    padding: 28px 22px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+
+    min-height: 235px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.contact-action-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 18px 45px rgba(23,23,21,.08);
+}
+
+.contact-action-number {
+    color: var(--accent);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.contact-action-card h3 {
+    margin: 32px 0 7px;
+
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+.contact-action-card p {
+    max-width: 260px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.click-now {
+    margin-top: auto;
+
+    min-height: 44px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--dark);
+
+    color: var(--white);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+.click-now span {
+    color: var(--accent-light);
+
+    font-size: 15px;
+}
+
+.click-now:hover {
+    background: var(--dark-soft);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT BOXES — TABLET / DESKTOP
+========================================================= */
+
+@media (min-width: 600px) {
+
+    .quick-contact {
+        padding: 110px 0;
+    }
+
+    .quick-contact-inner {
+        width: min(
+            calc(100% - 56px),
+            var(--container)
+        );
+    }
+
+    .contact-action-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+}
+
+
+@media (min-width: 900px) {
+
+    .quick-contact-inner {
+        width: min(
+            calc(100% - 80px),
+            var(--container)
+        );
+    }
+
+    .contact-action-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .contact-action-card {
+        min-height: 280px;
+
+        padding: 30px 24px;
+    }
+
+}
