@@ -1,79 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>The Lenses — Premium Eyewear & Optical</title>
 
     <meta name="description"
-          content="Discover premium eyewear, optical frames and sunglasses at The Lenses. Explore contemporary eyewear designed around your vision and style.">
+          content="The Lenses offers premium eyewear, optical frames and sunglasses selected around your vision, comfort and personal style.">
 
     <meta name="keywords"
-          content="The Lenses, eyewear, optical store, premium eyewear, sunglasses, optical frames">
+          content="The Lenses, premium eyewear, optical frames, sunglasses, eyewear store">
 
-    <meta name="author" content="The Lenses">
+    <meta name="author"
+          content="The Lenses">
 
-    <meta property="og:title" content="The Lenses — Premium Eyewear">
+    <meta name="theme-color"
+          content="#171715">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+          content="The Lenses — Premium Eyewear">
+
     <meta property="og:description"
-          content="Premium eyewear designed around your vision and style.">
-    <meta property="og:type" content="website">
+          content="Premium eyewear designed around your vision and personal style.">
 
-    <link rel="icon" href="images/logo.png">
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:image"
+          content="images/hero.jpg">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          href="images/logo.png">
+
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
+
 <body>
 
-<!-- ================= PRELOADER ================= -->
 
-<div class="preloader">
-    <div class="loader-logo">THE LENSES</div>
+<!-- =====================================================
+     PRELOADER
+====================================================== -->
+
+<div class="preloader"
+     aria-hidden="true">
+
+    <div class="loader-logo">
+        THE LENSES
+    </div>
+
 </div>
 
 
-<!-- ================= HEADER ================= -->
 
-<header class="header">
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header"
+        id="site-header">
+
 
     <div class="nav-container">
 
-        <a href="index.html" class="logo">
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="logo"
+           aria-label="The Lenses Home">
+
             <span>THE</span>
             LENSES
+
         </a>
 
-        <nav class="desktop-nav">
 
-            <a href="index.html" class="active">Home</a>
 
-            <a href="#about">About</a>
+        <!-- DESKTOP NAVIGATION -->
 
-            <a href="collection.html">Collection</a>
+        <nav class="desktop-nav"
+             aria-label="Main navigation">
 
-            <a href="#services">Services</a>
 
-            <a href="#gallery">Gallery</a>
+            <a href="index.html"
+               class="active">
 
-            <a href="contact.html">Contact</a>
+                Home
+
+            </a>
+
+
+            <a href="#about">
+
+                About
+
+            </a>
+
+
+            <a href="collection.html">
+
+                Collection
+
+            </a>
+
+
+            <a href="#services">
+
+                Services
+
+            </a>
+
+
+            <a href="contact.html">
+
+                Contact
+
+            </a>
 
         </nav>
 
-        <a href="contact.html" class="nav-button">
-            Book Appointment
+
+
+        <!-- DESKTOP CTA -->
+
+        <a href="contact.html"
+           class="nav-button">
+
+            Visit Us
+
         </a>
 
-        <button class="menu-button" aria-label="Open menu">
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
 
             <span></span>
             <span></span>
@@ -84,79 +182,178 @@
     </div>
 
 
-    <!-- MOBILE MENU -->
 
-    <div class="mobile-menu">
+    <!-- =================================================
+         MOBILE MENU
+    ================================================== -->
 
-        <a href="index.html">Home</a>
+    <div class="mobile-menu"
+         id="mobile-menu"
+         aria-hidden="true">
 
-        <a href="#about">About</a>
 
-        <a href="collection.html">Collection</a>
+        <div class="mobile-menu-inner">
 
-        <a href="#services">Services</a>
 
-        <a href="#gallery">Gallery</a>
+            <p class="mobile-menu-label">
 
-        <a href="contact.html">Contact</a>
+                THE LENSES
 
-        <a href="contact.html" class="mobile-cta">
-            Book Appointment
-        </a>
+            </p>
+
+
+
+            <nav aria-label="Mobile navigation">
+
+
+                <a href="index.html">
+
+                    <span>01</span>
+
+                    Home
+
+                </a>
+
+
+                <a href="collection.html">
+
+                    <span>02</span>
+
+                    Collection
+
+                </a>
+
+
+                <a href="#about">
+
+                    <span>03</span>
+
+                    About
+
+                </a>
+
+
+                <a href="#services">
+
+                    <span>04</span>
+
+                    Services
+
+                </a>
+
+
+                <a href="contact.html">
+
+                    <span>05</span>
+
+                    Contact
+
+                </a>
+
+            </nav>
+
+
+
+            <a href="contact.html"
+               class="mobile-visit">
+
+                Visit The Lenses
+
+                <span>↗</span>
+
+            </a>
+
+        </div>
 
     </div>
 
 </header>
 
 
+
 <main>
 
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero"
+         aria-label="The Lenses introduction">
+
 
     <div class="hero-image">
 
         <img
             src="images/hero.jpg"
-            alt="Premium eyewear collection"
-            loading="eager"
+            alt="Premium eyewear at The Lenses"
+            width="1600"
+            height="1100"
+            fetchpriority="high"
         >
 
     </div>
 
 
+
     <div class="hero-overlay"></div>
+
 
 
     <div class="hero-content">
 
+
         <p class="eyebrow">
-            PREMIUM EYEWEAR • MODERN VISION
+
+            PREMIUM EYEWEAR
+            <span>•</span>
+            MODERN VISION
+
         </p>
 
+
+
         <h1>
+
             See the
-            <span>Difference.</span>
+            <em>Difference.</em>
+
         </h1>
+
+
 
         <p class="hero-description">
 
-            Discover thoughtfully selected eyewear
-            designed around your vision, comfort
-            and personal style.
+            Thoughtfully selected eyewear
+            designed around your vision,
+            comfort and personal style.
 
         </p>
 
+
+
         <div class="hero-buttons">
 
-            <a href="collection.html" class="button button-light">
+
+            <a href="collection.html"
+               class="button button-light">
+
                 Explore Collection
+
+                <span>↗</span>
+
             </a>
 
-            <a href="contact.html" class="button button-outline">
-                Book an Appointment
+
+
+            <a href="contact.html"
+               class="button button-outline">
+
+                Visit Us
+
+                <span>↗</span>
+
             </a>
 
         </div>
@@ -164,55 +361,88 @@
     </div>
 
 
-    <div class="hero-scroll">
 
-        <span>Scroll to explore</span>
+    <div class="hero-bottom">
 
-        <div class="scroll-line"></div>
+
+        <span>
+
+            Premium eyewear
+
+        </span>
+
+
+        <span>
+
+            Scroll to explore
+
+        </span>
 
     </div>
 
 </section>
 
 
-<!-- ================= INTRO ================= -->
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
 
 <section class="intro section-padding">
 
+
     <div class="section-label">
+
         <span>01</span>
+
         THE LENSES
+
     </div>
+
 
 
     <div class="intro-grid">
 
+
         <div class="intro-title">
 
             <h2>
-                More than eyewear.
-                <em>It's your signature.</em>
+
+                More than
+                <br>
+                eyewear.
+
+                <em>
+                    It's your signature.
+                </em>
+
             </h2>
 
         </div>
+
 
 
         <div class="intro-text">
 
             <p>
 
-                At The Lenses, we believe eyewear should
-                do more than improve your vision.
+                At The Lenses, eyewear is more than
+                something you wear.
 
-                It should complement your personality,
-                your lifestyle and the way you see
-                the world.
+                It is a part of how you experience
+                the world and express yourself.
 
             </p>
 
-            <a href="#about" class="text-link">
+
+
+            <a href="#about"
+               class="text-link">
+
                 Discover our story
+
                 <span>↗</span>
+
             </a>
 
         </div>
@@ -222,62 +452,108 @@
 </section>
 
 
-<!-- ================= CATEGORIES ================= -->
+
+<!-- =====================================================
+     CATEGORIES
+====================================================== -->
 
 <section class="categories section-padding">
 
+
     <div class="section-heading">
+
 
         <div>
 
+
             <div class="section-label">
+
                 <span>02</span>
+
                 EXPLORE
+
             </div>
 
+
+
             <h2>
+
                 Find your
                 <em>frame.</em>
+
             </h2>
 
         </div>
 
+
+
         <p>
-            From timeless classics to contemporary
-            silhouettes, discover eyewear that feels
-            distinctly yours.
+
+            From timeless optical frames to
+            statement sunglasses, explore styles
+            selected for modern everyday living.
+
         </p>
 
     </div>
+
 
 
     <div class="category-grid">
 
 
-        <!-- CARD 1 -->
+        <!-- CATEGORY 01 -->
 
-        <a href="collection.html" class="category-card large">
+        <a href="collection.html"
+           class="category-card category-large">
+
 
             <img
                 src="images/frame-1.jpg"
                 alt="Premium optical frames"
                 loading="lazy"
+                width="1000"
+                height="1200"
             >
+
 
             <div class="category-overlay"></div>
 
+
+
             <div class="category-content">
 
-                <span>01</span>
 
-                <h3>Optical Frames</h3>
+                <span class="category-number">
+
+                    01
+
+                </span>
+
+
+
+                <h3>
+
+                    Optical Frames
+
+                </h3>
+
+
 
                 <p>
+
                     Refined frames for everyday vision.
+
                 </p>
 
+
+
                 <strong>
-                    Explore →
+
+                    Explore Collection
+
+                    <span>↗</span>
+
                 </strong>
 
             </div>
@@ -285,30 +561,59 @@
         </a>
 
 
-        <!-- CARD 2 -->
 
-        <a href="collection.html" class="category-card">
+        <!-- CATEGORY 02 -->
+
+        <a href="collection.html"
+           class="category-card">
+
 
             <img
                 src="images/sunglasses-1.jpg"
                 alt="Premium sunglasses"
                 loading="lazy"
+                width="1000"
+                height="1000"
             >
+
 
             <div class="category-overlay"></div>
 
+
+
             <div class="category-content">
 
-                <span>02</span>
 
-                <h3>Sunglasses</h3>
+                <span class="category-number">
+
+                    02
+
+                </span>
+
+
+
+                <h3>
+
+                    Sunglasses
+
+                </h3>
+
+
 
                 <p>
+
                     Protection with personality.
+
                 </p>
 
+
+
                 <strong>
-                    Explore →
+
+                    Explore Collection
+
+                    <span>↗</span>
+
                 </strong>
 
             </div>
@@ -316,107 +621,187 @@
         </a>
 
 
-        <!-- CARD 3 -->
 
-        <a href="collection.html" class="category-card">
+        <!-- CATEGORY 03 -->
+
+        <a href="collection.html"
+           class="category-card">
+
 
             <img
                 src="images/frame-2.jpg"
-                alt="Contemporary eyewear"
+                alt="Premium designer eyewear"
                 loading="lazy"
+                width="1000"
+                height="1000"
             >
+
 
             <div class="category-overlay"></div>
 
+
+
             <div class="category-content">
 
-                <span>03</span>
 
-                <h3>Premium Collection</h3>
+                <span class="category-number">
+
+                    03
+
+                </span>
+
+
+
+                <h3>
+
+                    Premium Collection
+
+                </h3>
+
+
 
                 <p>
-                    Curated styles for a distinctive look.
+
+                    Distinctive styles for a refined look.
+
                 </p>
 
+
+
                 <strong>
-                    Explore →
+
+                    Explore Collection
+
+                    <span>↗</span>
+
                 </strong>
 
             </div>
 
         </a>
-
 
     </div>
 
 </section>
 
 
-<!-- ================= FEATURED COLLECTION ================= -->
+
+<!-- =====================================================
+     FEATURED COLLECTION
+====================================================== -->
 
 <section class="featured section-padding">
 
+
     <div class="section-heading">
+
 
         <div>
 
+
             <div class="section-label">
+
                 <span>03</span>
+
                 CURATED FOR YOU
+
             </div>
 
+
+
             <h2>
-                The Signature
-                <em>Collection.</em>
+
+                Signature
+                <em>pieces.</em>
+
             </h2>
 
         </div>
 
-        <a href="collection.html" class="text-link">
-            View all collection
+
+
+        <a href="collection.html"
+           class="text-link">
+
+            View Collection
+
             <span>↗</span>
+
         </a>
 
     </div>
+
 
 
     <div class="product-grid">
 
 
-        <!-- PRODUCT 1 -->
+        <!-- PRODUCT 01 -->
 
         <article class="product-card">
 
-            <div class="product-image">
+
+            <a href="collection.html"
+               class="product-image"
+               aria-label="View Luna Classic">
+
 
                 <span class="product-tag">
+
                     FEATURED
+
                 </span>
+
+
 
                 <img
                     src="images/product-1.jpg"
-                    alt="Luna Classic eyewear"
+                    alt="Luna Classic premium optical frame"
                     loading="lazy"
+                    width="900"
+                    height="1100"
                 >
 
-                <a href="contact.html" class="product-action">
-                    Enquire →
-                </a>
 
-            </div>
+                <span class="product-action">
+
+                    View Piece
+
+                    <span>↗</span>
+
+                </span>
+
+            </a>
+
+
 
             <div class="product-info">
 
+
                 <div>
 
-                    <h3>Luna Classic</h3>
 
-                    <p>Premium Optical Frame</p>
+                    <h3>
+
+                        Luna Classic
+
+                    </h3>
+
+
+                    <p>
+
+                        Premium Optical Frame
+
+                    </p>
 
                 </div>
 
+
+
                 <span class="product-number">
+
                     01
+
                 </span>
 
             </div>
@@ -424,40 +809,73 @@
         </article>
 
 
-        <!-- PRODUCT 2 -->
+
+        <!-- PRODUCT 02 -->
 
         <article class="product-card">
 
-            <div class="product-image">
+
+            <a href="collection.html"
+               class="product-image"
+               aria-label="View Aurex Bold">
+
 
                 <span class="product-tag">
+
                     NEW
+
                 </span>
+
+
 
                 <img
                     src="images/product-2.jpg"
-                    alt="Aurex Bold eyewear"
+                    alt="Aurex Bold contemporary eyewear"
                     loading="lazy"
+                    width="900"
+                    height="1100"
                 >
 
-                <a href="contact.html" class="product-action">
-                    Enquire →
-                </a>
 
-            </div>
+                <span class="product-action">
+
+                    View Piece
+
+                    <span>↗</span>
+
+                </span>
+
+            </a>
+
+
 
             <div class="product-info">
 
+
                 <div>
 
-                    <h3>Aurex Bold</h3>
 
-                    <p>Contemporary Frame</p>
+                    <h3>
+
+                        Aurex Bold
+
+                    </h3>
+
+
+                    <p>
+
+                        Contemporary Frame
+
+                    </p>
 
                 </div>
 
+
+
                 <span class="product-number">
+
                     02
+
                 </span>
 
             </div>
@@ -465,106 +883,197 @@
         </article>
 
 
-        <!-- PRODUCT 3 -->
+
+        <!-- PRODUCT 03 -->
 
         <article class="product-card">
 
-            <div class="product-image">
+
+            <a href="collection.html"
+               class="product-image"
+               aria-label="View Noir Edge">
+
 
                 <img
                     src="images/product-3.jpg"
-                    alt="Noir Edge sunglasses"
+                    alt="Noir Edge premium sunglasses"
                     loading="lazy"
+                    width="900"
+                    height="1100"
                 >
 
-                <a href="contact.html" class="product-action">
-                    Enquire →
-                </a>
 
-            </div>
+                <span class="product-action">
+
+                    View Piece
+
+                    <span>↗</span>
+
+                </span>
+
+            </a>
+
+
 
             <div class="product-info">
 
+
                 <div>
 
-                    <h3>Noir Edge</h3>
 
-                    <p>Premium Sunglasses</p>
+                    <h3>
+
+                        Noir Edge
+
+                    </h3>
+
+
+                    <p>
+
+                        Premium Sunglasses
+
+                    </p>
 
                 </div>
 
+
+
                 <span class="product-number">
+
                     03
+
                 </span>
 
             </div>
 
         </article>
 
+    </div>
+
+
+
+    <div class="collection-note">
+
+
+        <span>
+
+            06 curated styles
+
+        </span>
+
+
+
+        <a href="collection.html">
+
+            Explore the complete collection
+
+            <span>↗</span>
+
+        </a>
 
     </div>
 
-</section>
+    </section>
+    <!-- =====================================================
+     ABOUT
+====================================================== -->
 
+<section id="about"
+         class="about section-padding">
 
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="about section-padding">
 
     <div class="about-image">
 
         <img
             src="images/store.jpg"
-            alt="The Lenses optical showroom"
+            alt="The Lenses premium optical showroom"
             loading="lazy"
+            width="1000"
+            height="1200"
         >
+
 
         <div class="experience-badge">
 
-            <span>THE</span>
+            <span>
+                THE
+            </span>
 
-            <strong>LENSES</strong>
 
-            <small>VISION • STYLE • PRECISION</small>
+            <strong>
+                LENSES
+            </strong>
+
+
+            <small>
+                VISION • STYLE • PRECISION
+            </small>
 
         </div>
 
     </div>
 
 
+
     <div class="about-content">
 
+
         <div class="section-label">
-            <span>04</span>
+
+            <span>
+                04
+            </span>
+
             OUR PHILOSOPHY
+
         </div>
 
+
+
         <h2>
+
             Where vision
-            meets <em>style.</em>
+            meets
+            <em>style.</em>
+
         </h2>
+
+
 
         <p>
 
             Choosing eyewear is personal.
 
-            That's why The Lenses brings together
+            That is why The Lenses brings together
             contemporary design, comfort and
             thoughtful guidance to help you find
-            eyewear that feels right.
+            something that feels right.
 
         </p>
+
+
 
         <p>
 
-            Every frame is an opportunity to express
-            how you see yourself — and how you want
-            the world to see you.
+            Every frame is selected with a simple
+            idea in mind — your eyewear should
+            feel as individual as you are.
 
         </p>
 
-        <a href="contact.html" class="button button-dark">
+
+
+        <a
+            href="contact.html"
+            class="button button-dark"
+        >
+
             Visit The Lenses
+
+            <span>
+                ↗
+            </span>
+
         </a>
 
     </div>
@@ -572,243 +1081,367 @@
 </section>
 
 
-<!-- ================= SERVICES ================= -->
 
-<section id="services" class="services section-padding">
+<!-- =====================================================
+     SERVICES
+====================================================== -->
+
+<section id="services"
+         class="services section-padding">
+
 
     <div class="section-heading">
 
+
         <div>
 
+
             <div class="section-label">
-                <span>05</span>
+
+                <span>
+                    05
+                </span>
+
                 OUR SERVICES
+
             </div>
 
+
+
             <h2>
+
                 Care beyond
                 <em>the frame.</em>
+
             </h2>
 
         </div>
 
+
+
+        <p>
+
+            Thoughtful guidance before,
+            during and after you choose
+            your eyewear.
+
+        </p>
+
     </div>
+
 
 
     <div class="service-list">
 
 
-        <div class="service-item">
+        <!-- SERVICE 01 -->
+
+        <a
+            href="contact.html"
+            class="service-item"
+        >
+
 
             <span class="service-number">
+
                 01
+
             </span>
 
-            <div>
 
-                <h3>Vision Consultation</h3>
+
+            <div class="service-copy">
+
+
+                <h3>
+
+                    Vision Consultation
+
+                </h3>
+
 
                 <p>
+
                     Professional guidance for your
                     vision and eyewear requirements.
+
                 </p>
 
             </div>
 
+
+
             <span class="service-arrow">
+
                 ↗
+
             </span>
 
-        </div>
+        </a>
 
 
-        <div class="service-item">
+
+        <!-- SERVICE 02 -->
+
+        <a
+            href="contact.html"
+            class="service-item"
+        >
+
 
             <span class="service-number">
+
                 02
+
             </span>
 
-            <div>
 
-                <h3>Frame Consultation</h3>
+
+            <div class="service-copy">
+
+
+                <h3>
+
+                    Frame Consultation
+
+                </h3>
+
 
                 <p>
-                    Find a frame that complements
-                    your comfort, face and personal style.
+
+                    Find a frame that balances
+                    comfort, fit and personal style.
+
                 </p>
 
             </div>
 
+
+
             <span class="service-arrow">
+
                 ↗
+
             </span>
 
-        </div>
+        </a>
 
 
-        <div class="service-item">
+
+        <!-- SERVICE 03 -->
+
+        <a
+            href="contact.html"
+            class="service-item"
+        >
+
 
             <span class="service-number">
+
                 03
+
             </span>
 
-            <div>
 
-                <h3>Lens Consultation</h3>
+
+            <div class="service-copy">
+
+
+                <h3>
+
+                    Lens Consultation
+
+                </h3>
+
 
                 <p>
+
                     Explore suitable lens options
                     based on your lifestyle and needs.
+
                 </p>
 
             </div>
 
+
+
             <span class="service-arrow">
+
                 ↗
+
             </span>
 
-        </div>
+        </a>
 
 
-        <div class="service-item">
+
+        <!-- SERVICE 04 -->
+
+        <a
+            href="contact.html"
+            class="service-item"
+        >
+
 
             <span class="service-number">
+
                 04
+
             </span>
 
-            <div>
 
-                <h3>Frame Adjustment</h3>
+
+            <div class="service-copy">
+
+
+                <h3>
+
+                    Frame Adjustment
+
+                </h3>
+
 
                 <p>
-                    Fine adjustments for improved
-                    fit and everyday comfort.
+
+                    Fine adjustments for a comfortable
+                    everyday fit.
+
                 </p>
 
             </div>
 
+
+
             <span class="service-arrow">
+
+                ↗
+
+            </span>
+
+        </a>
+
+    </div>
+
+
+
+    <div class="services-footer">
+
+
+        <p>
+
+            Need help choosing the right eyewear?
+
+        </p>
+
+
+
+        <a
+            href="contact.html"
+            class="text-link"
+        >
+
+            Talk to us
+
+            <span>
                 ↗
             </span>
 
-        </div>
-
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- ================= VISION CTA ================= -->
+
+<!-- =====================================================
+     VISION CTA
+====================================================== -->
 
 <section class="vision-cta">
+
 
     <div class="vision-image">
 
         <img
             src="images/vision.jpg"
-            alt="Premium eyewear"
+            alt="Premium eyewear experience"
             loading="lazy"
+            width="1600"
+            height="1000"
         >
 
     </div>
 
+
+
     <div class="vision-overlay"></div>
+
 
 
     <div class="vision-content">
 
+
         <div class="section-label light">
-            <span>06</span>
+
+            <span>
+                06
+            </span>
+
             YOUR VISION MATTERS
+
         </div>
+
+
 
         <h2>
+
             See yourself
             <em>differently.</em>
+
         </h2>
 
+
+
         <p>
-            Visit The Lenses and discover eyewear
-            selected around your vision and style.
+
+            Discover eyewear selected around
+            your vision, comfort and style.
+
         </p>
 
-        <a href="contact.html" class="button button-light">
-            Book an Appointment
-        </a>
-
-    </div>
-
-</section>
 
 
-<!-- ================= GALLERY ================= -->
-
-<section id="gallery" class="gallery section-padding">
-
-    <div class="section-heading">
-
-        <div>
-
-            <div class="section-label">
-                <span>07</span>
-                THE EXPERIENCE
-            </div>
-
-            <h2>
-                Inside
-                <em>The Lenses.</em>
-            </h2>
-
-        </div>
-
-        <a href="contact.html" class="text-link">
-            Visit showroom
-            <span>↗</span>
-        </a>
-
-    </div>
+        <div class="vision-actions">
 
 
-    <div class="gallery-grid">
-
-        <div class="gallery-item gallery-large">
-
-            <img
-                src="images/gallery-1.jpg"
-                alt="The Lenses eyewear"
-                loading="lazy"
+            <a
+                href="contact.html"
+                class="button button-light"
             >
 
-        </div>
+                Book an Appointment
 
-        <div class="gallery-item">
+                <span>
+                    ↗
+                </span>
 
-            <img
-                src="images/gallery-2.jpg"
-                alt="Eyewear collection"
-                loading="lazy"
+            </a>
+
+
+
+            <a
+                href="collection.html"
+                class="vision-text-link"
             >
 
-        </div>
+                Explore Collection
 
-        <div class="gallery-item">
+                <span>
+                    ↗
+                </span>
 
-            <img
-                src="images/gallery-3.jpg"
-                alt="Premium glasses"
-                loading="lazy"
-            >
-
-        </div>
-
-        <div class="gallery-item">
-
-            <img
-                src="images/gallery-4.jpg"
-                alt="Optical showroom"
-                loading="lazy"
-            >
+            </a>
 
         </div>
 
@@ -817,37 +1450,61 @@
 </section>
 
 
-<!-- ================= TESTIMONIALS ================= -->
+
+<!-- =====================================================
+     TESTIMONIAL
+====================================================== -->
 
 <section class="testimonials section-padding">
 
-    <div class="section-label">
-        <span>08</span>
-        CLIENT STORIES
+
+    <div class="section-label light">
+
+        <span>
+            07
+        </span>
+
+        CLIENT EXPERIENCE
+
     </div>
+
+
 
     <div class="testimonial-main">
 
+
         <div class="quote-mark">
+
             “
+
         </div>
+
+
 
         <blockquote>
 
-            “A premium eyewear experience
-            where great design and personal
-            attention come together.”
+            A refined eyewear experience
+            built around great design,
+            comfort and personal attention.
 
         </blockquote>
 
+
+
         <div class="testimonial-author">
 
+
             <strong>
-                — The Lenses Client
+
+                THE LENSES CLIENT
+
             </strong>
 
+
             <span>
-                Verified Customer
+
+                Customer Experience
+
             </span>
 
         </div>
@@ -857,49 +1514,89 @@
 </section>
 
 
-<!-- ================= LOCATION ================= -->
+
+<!-- =====================================================
+     LOCATION
+====================================================== -->
 
 <section class="location section-padding">
 
+
     <div class="location-content">
 
+
         <div class="section-label">
-            <span>09</span>
+
+            <span>
+                08
+            </span>
+
             FIND US
+
         </div>
 
+
+
         <h2>
+
             Come see us
             <em>in person.</em>
+
         </h2>
 
+
+
         <p>
-            Experience our collection, get expert
-            guidance and find your next signature frame.
+
+            Experience the collection,
+            get personalised guidance and
+            discover your next signature frame.
+
         </p>
+
 
 
         <div class="location-details">
 
+
             <div>
 
-                <span>ADDRESS</span>
+
+                <span>
+
+                    ADDRESS
+
+                </span>
+
 
                 <strong>
-                    Your Address Here,<br>
+
+                    Your Address Here,
+                    <br>
                     Your City, Maharashtra
+
                 </strong>
 
             </div>
 
 
+
             <div>
 
-                <span>OPENING HOURS</span>
+
+                <span>
+
+                    OPENING HOURS
+
+                </span>
+
 
                 <strong>
-                    Monday — Sunday<br>
+
+                    Monday — Sunday
+                    <br>
                     10:00 AM — 9:00 PM
+
                 </strong>
 
             </div>
@@ -907,25 +1604,138 @@
         </div>
 
 
-        <a href="contact.html" class="button button-dark">
+
+        <a
+            href="https://maps.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-dark"
+        >
+
             Get Directions
+
+            <span>
+                ↗
+            </span>
+
         </a>
 
     </div>
 
 
+
     <div class="map-placeholder">
+
 
         <div class="map-inner">
 
-            <span>THE LENSES</span>
+
+            <span>
+
+                THE LENSES
+
+            </span>
+
+
 
             <strong>
+
                 Your Location
+
             </strong>
 
-            <a href="contact.html">
-                Open in Maps ↗
+
+
+            <a
+                href="https://maps.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Open in Maps
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+        </section>
+        <!-- =====================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final-cta">
+
+
+    <div class="final-cta-inner">
+
+
+        <div class="section-label light">
+
+            <span>
+                09
+            </span>
+
+            START YOUR JOURNEY
+
+        </div>
+
+
+
+        <h2>
+
+            Your next frame
+            <br>
+            is waiting.
+
+        </h2>
+
+
+
+        <p>
+
+            Explore our collection or
+            get in touch with The Lenses
+            for a personalised eyewear experience.
+
+        </p>
+
+
+
+        <div class="final-actions">
+
+
+            <a
+                href="collection.html"
+                class="button button-light"
+            >
+
+                Explore Collection
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="contact.html"
+                class="button button-outline-light"
+            >
+
+                Contact The Lenses
+
+                <span>
+                    ↗
+                </span>
+
             </a>
 
         </div>
@@ -934,104 +1744,214 @@
 
 </section>
 
-
-<!-- ================= FINAL CTA ================= -->
-
-<section class="final-cta">
-
-    <div class="section-label light">
-        THE LENSES
-    </div>
-
-    <h2>
-        Ready to see
-        <em>the difference?</em>
-    </h2>
-
-    <a href="contact.html" class="button button-light">
-        Start Your Experience
-    </a>
-
-</section>
 
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer class="footer">
 
+
     <div class="footer-top">
+
+
+        <!-- BRAND -->
 
         <div class="footer-brand">
 
-            <a href="index.html" class="footer-logo">
-                THE LENSES
+
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
+
+                <span>
+                    THE
+                </span>
+
+                LENSES
+
             </a>
+
+
 
             <p>
-                Premium eyewear for people
-                who see things differently.
+
+                Premium eyewear,
+                thoughtfully selected
+                for modern vision.
+
             </p>
 
-            <div class="social-links">
-
-                <a href="#" aria-label="Instagram">
-                    Instagram
-                </a>
-
-                <a href="#" aria-label="Facebook">
-                    Facebook
-                </a>
-
-            </div>
-
-        </div>
 
 
-        <div class="footer-column">
+            <a
+                href="contact.html"
+                class="footer-visit"
+            >
 
-            <h4>Explore</h4>
+                Visit The Lenses
 
-            <a href="index.html">Home</a>
+                <span>
+                    ↗
+                </span>
 
-            <a href="#about">About</a>
-
-            <a href="collection.html">Collection</a>
-
-            <a href="#services">Services</a>
+            </a>
 
         </div>
 
 
+
+        <!-- NAVIGATION -->
+
         <div class="footer-column">
 
-            <h4>Visit</h4>
 
-            <a href="contact.html">Contact</a>
+            <h3>
 
-            <a href="contact.html">Appointment</a>
+                EXPLORE
 
-            <a href="contact.html">Directions</a>
+            </h3>
+
+
+
+            <a href="index.html">
+
+                Home
+
+            </a>
+
+
+
+            <a href="collection.html">
+
+                Collection
+
+            </a>
+
+
+
+            <a href="index.html#about">
+
+                About
+
+            </a>
+
+
+
+            <a href="index.html#services">
+
+                Services
+
+            </a>
+
+
+
+            <a href="contact.html">
+
+                Contact
+
+            </a>
 
         </div>
 
 
+
+        <!-- CONTACT -->
+
         <div class="footer-column">
 
-            <h4>Contact</h4>
+
+            <h3>
+
+                CONNECT
+
+            </h3>
+
+
+
+            <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                WhatsApp
+
+            </a>
+
+
 
             <a href="tel:+919999999999">
-                +91 99999 99999
+
+                Call Us
+
             </a>
 
-            <a href="https://wa.me/919999999999">
-                WhatsApp
-            </a>
 
-            <a href="#">
+
+            <a
+                href="https://instagram.com/YOUR_USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
                 Instagram
+
+            </a>
+
+
+
+            <a href="mailto:hello@thelenses.com">
+
+                Email
+
+            </a>
+
+        </div>
+
+
+
+        <!-- LOCATION -->
+
+        <div class="footer-column">
+
+
+            <h3>
+
+                VISIT
+
+            </h3>
+
+
+
+            <p>
+
+                Your Address Here
+                <br>
+                Your City, Maharashtra
+
+            </p>
+
+
+
+            <a
+                href="https://maps.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Get Directions
+
+                <span>
+                    ↗
+                </span>
+
             </a>
 
         </div>
@@ -1039,22 +1959,78 @@
     </div>
 
 
+
+    <!-- FOOTER BOTTOM -->
+
     <div class="footer-bottom">
 
-        <span>
-            © 2026 The Lenses. All Rights Reserved.
-        </span>
 
-        <span>
-            Premium Eyewear • Vision • Style
-        </span>
+        <p>
+
+            ©
+            <span id="current-year"></span>
+            The Lenses.
+            All rights reserved.
+
+        </p>
+
+
+
+        <div class="footer-bottom-links">
+
+
+            <span>
+
+                PREMIUM EYEWEAR
+
+            </span>
+
+
+
+            <span>
+
+                •
+
+            </span>
+
+
+
+            <span>
+
+                MODERN VISION
+
+            </span>
+
+        </div>
+
+
+
+        <a
+            href="#"
+            class="back-top"
+            aria-label="Back to top"
+        >
+
+            Back to top
+
+            <span>
+                ↑
+            </span>
+
+        </a>
 
     </div>
 
 </footer>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
 <script src="script.js"></script>
 
 </body>
-                    </html>
+
+</html>
